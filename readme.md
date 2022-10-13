@@ -1,4 +1,4 @@
-TS and JS Console styling
+Console text styling for TS and JS
 
 <p align="center">
     <a style="font-size:15px;font-family:verdana"><b>Statistics/Info:</b></a><br>
@@ -47,5 +47,5 @@ import { log } from console-style
 ### 3. Example usage
 
 ```
-console.log('Hello World', {color: 'red', style: 'underline'});
+log('Hello World', {color: 'red', style: 'underline'});
 ```
