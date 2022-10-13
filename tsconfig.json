@@ -6,7 +6,7 @@
 		"esModuleInterop": true,
 		"target": "ESNext",
 		"module": "commonjs",
-		"lib": ["ESNext"]
+		"lib": ["ESNext", "DOM"]
 	},
 	"include": ["src", "../../console-colors/colors.ts"],
 	"exclude": ["node_modules", "dist"]

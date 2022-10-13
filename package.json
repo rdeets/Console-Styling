@@ -1,5 +1,5 @@
 {
-  "name": "console-style",
+  "name": "console-styling",
   "version": "1.0.0",
   "description": "Terminal Text Styling",
   "main": "dist/index.js",
@@ -7,9 +7,20 @@
   "scripts": {
     "build": "tsc"
   },
+  "keywords": [
+    "typescript",
+    "console",
+    "utility",
+    "terminal styling"
+  ],
   "author": "Ryan Deets",
   "license": "ISC",
-  "dependencies": {
+  "homepage": "https://github.com/rdeets/Console-Styling/blob/main/readme.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdeets/Console-Styling"
+  },
+  "devDependencies": {
     "typescript": "^4.8.4"
   }
 }

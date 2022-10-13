@@ -38,8 +38,14 @@ Run the following command:
 npm install console-styling
 ```
 
-### 2. import package
+### 2. Import package
 
 ```
 import { log } from console-style
+```
+
+### 3. Example usage
+
+```
+console.log('Hello World', {color: 'red', style: 'underline'});
 ```
