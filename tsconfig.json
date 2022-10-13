@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"outDir": "dist",
+		"declaration": true,
+		"strict": true,
+		"esModuleInterop": true,
+		"target": "ESNext",
+		"module": "commonjs",
+		"lib": ["ESNext"]
+	},
+	"include": ["src", "../../console-colors/colors.ts"],
+	"exclude": ["node_modules", "dist"]
+}
