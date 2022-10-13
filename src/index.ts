@@ -55,7 +55,7 @@ const typeCodes = {
 };
 
 export const log = (
-	text: string,
+	text?: any,
 	options?: {
 		color?: keyof typeof colorCodes;
 		style?: keyof typeof styleCodes;
