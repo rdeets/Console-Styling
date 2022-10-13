@@ -50,7 +50,8 @@ const typeCodes = {
 	SUCCESS: `\x1b[${colorCodes.greenBright[0]}m\x1b[${styleCodes.bold[0]}m✓ %s\x1b[${styleCodes.bold[1]}m\x1b[${colorCodes.greenBright[1]}m\x1b[0m`,
 	ERROR: `\x1b[${colorCodes.redBright[0]}m\x1b[${styleCodes.bold[0]}mError: %s\x1b[${styleCodes.bold[1]}m\x1b[${colorCodes.redBright[1]}m\x1b[0m`,
 	FAIL: `\x1b[${colorCodes.red[0]}m\x1b[${styleCodes.dim[0]}mX %s\x1b[${styleCodes.dim}m\x1b[${colorCodes.red[1]}m\x1b[0m`,
-	INFO: `\x1b[${colorCodes.blue[0]}m-> %s\x1b[0m\x1b[${colorCodes.blue[1]}m\x1b[0m`
+	INFO: `\x1b[${colorCodes.blue[0]}m-> %s\x1b[0m\x1b[${colorCodes.blue[1]}m\x1b[0m`,
+	LINK: `\x1b[${colorCodes.blueBright[0]}m\x1b[${styleCodes.underline[0]}m%s\x1b[${styleCodes.underline[1]}m\x1b[${colorCodes.blueBright[1]}m\x1b[0m`
 };
 
 export const log = (
