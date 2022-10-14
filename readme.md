@@ -48,4 +48,7 @@ import { log } from console-style
 
 ```
 log('Hello World', {color: 'red', style: 'underline'});
+
+const customStyle = {color: 'blue', style: 'bold'}
+log('Hello World', customStyle);
 ```
