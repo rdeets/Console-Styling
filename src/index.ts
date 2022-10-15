@@ -1,7 +1,7 @@
 export type LogOptions = {
 	color?: keyof typeof colorCodes;
 	style?: keyof typeof styleCodes;
-	preset?: keyof typeof typeCodes;
+	preset?: keyof typeof presetCodes;
 };
 
 export type Log = typeof log;
@@ -54,9 +54,9 @@ const styleCodes = {
 	strikethrough: [9, 29]
 };
 
-const typeCodes = {
-	success: `\x1b[${colorCodes.greenBright[0]}m\x1b[${styleCodes.bold[0]}m✓ %s\x1b[${styleCodes.bold[1]}m\x1b[${colorCodes.greenBright[1]}m\x1b[0m`,
-	error: `\x1b[${colorCodes.redBright[0]}m\x1b[${styleCodes.bold[0]}mError: %s\x1b[${styleCodes.bold[1]}m\x1b[${colorCodes.redBright[1]}m\x1b[0m`,
+const presetCodes = {
+	success: `\x1b[${colorCodes.greenBright[0]}m✓ %s\x1b[${colorCodes.greenBright[1]}m\x1b[0m`,
+	error: `\x1b[${colorCodes.redBright[0]}mError: %s\x1b[${colorCodes.redBright[1]}m\x1b[0m`,
 	fail: `\x1b[${colorCodes.red[0]}mX %s\x1b[${colorCodes.red[1]}m\x1b[0m`,
 	info: `\x1b[${colorCodes.blue[0]}m⧫ %s\x1b[0m\x1b[${colorCodes.blue[1]}m\x1b[0m`,
 	link: `\x1b[${colorCodes.blueBright[0]}m\x1b[${styleCodes.underline[0]}m%s\x1b[${styleCodes.underline[1]}m\x1b[${colorCodes.blueBright[1]}m\x1b[0m`
@@ -65,7 +65,7 @@ const typeCodes = {
 export const log = (text?: any, options?: LogOptions) => {
 	if (!options) return console.log(text);
 
-	if (options.preset) return console.log(typeCodes[options.preset], text);
+	if (options.preset) return console.log(presetCodes[options.preset], text);
 
 	const style = options.style && styleCodes[options.style];
 	const color = options.color && colorCodes[options.color];
