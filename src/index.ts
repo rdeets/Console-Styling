@@ -1,3 +1,11 @@
+export type LogOptions = {
+	color?: keyof typeof colorCodes;
+	style?: keyof typeof styleCodes;
+	preset?: keyof typeof typeCodes;
+};
+
+export type Log = typeof log;
+
 const colorCodes = {
 	blue: [34, 89],
 	yellow: [33, 89],
@@ -54,14 +62,7 @@ const typeCodes = {
 	link: `\x1b[${colorCodes.blueBright[0]}m\x1b[${styleCodes.underline[0]}m%s\x1b[${styleCodes.underline[1]}m\x1b[${colorCodes.blueBright[1]}m\x1b[0m`
 };
 
-export const log = (
-	text?: any,
-	options?: {
-		color?: keyof typeof colorCodes;
-		style?: keyof typeof styleCodes;
-		preset?: keyof typeof typeCodes;
-	}
-) => {
+export const log = (text?: any, options?: LogOptions) => {
 	if (!options) return console.log(text);
 
 	if (options.preset) return console.log(typeCodes[options.preset], text);
